@@ -1,4 +1,4 @@
-# App makes an api call from user input and display result
+# Get the burger of the day from Bob's Burger Api
 
 This app makes an api call to the Bob's Burger Api using fetch inside useEffect Hook.
 
@@ -7,6 +7,7 @@ There are 333 episodes to check from, and the app only accepts numbers in that r
 
 The burger shown when the app first calls the api, before the user input, is the burger of the current day of the year, converted to a number. As there are more days in the year than episodes, the app will show the burger for the first episode, when the day number exceeds 333.
 
+[Bob's Burgers Api](https://www.bobsburgersapi.com/)
 
 
 # Getting Started with Create React App
