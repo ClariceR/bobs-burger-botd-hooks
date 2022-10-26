@@ -1,4 +1,4 @@
-# Get the burger of the day from Bob's Burger Api
+# Get the burger of the day from Bob's Burgers Api
 
 This app makes an api call to the Bob's Burger Api using fetch inside useEffect Hook.
 
