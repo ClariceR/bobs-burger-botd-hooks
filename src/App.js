@@ -6,6 +6,19 @@ function App() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  const getDayOfYear = (date) =>
+    Math.floor(
+      (date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24
+    );
+
+  const dayOfYear = () => {
+    let today = getDayOfYear(new Date());
+    if (today > 0 && today < 334) {
+      return today.toString();
+    }
+    return '1';
+  };
+
   const inputEpisode = useRef();
   const [episode, dispatch] = useReducer(
     (state, action) => {
@@ -14,7 +27,7 @@ function App() {
         name: action.name,
       };
     },
-    { id: '1' }
+    { id: dayOfYear() }
   );
 
   const handleSubmit = (e) => {
@@ -45,7 +58,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Bob's Burger</h1>
+      <h1>Bob's Burgers</h1>
       <h3>Burger of the day</h3>
       <div className="board">
         <p>{data.name}</p>
