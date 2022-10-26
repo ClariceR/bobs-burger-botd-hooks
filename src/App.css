@@ -1,10 +1,22 @@
+body {
+  background-color: rgb(118, 122, 132);
+  color: white;
+}
+
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.board {
+  width: 200px;
+  margin: 0 auto;
+  line-height: 1.5rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
